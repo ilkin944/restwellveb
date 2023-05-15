@@ -111,10 +111,10 @@ if(document.getElementById("map") !== null){
        
         for (var i = 0; i < locations.length; i++) {
 
-          var listeoIcon = L.divIcon({
+          var restwellIcon = L.divIcon({
               iconAnchor: [20, 51], // point of the icon which will correspond to marker's location
               popupAnchor: [0, -51],
-              className: 'listeo-marker-icon',
+              className: 'restwell-marker-icon',
               html:  '<div class="marker-container">'+
                        '<div class="marker-card">'+
                           '<div class="front face">' + locations[i][4] + '</div>'+
@@ -132,7 +132,7 @@ if(document.getElementById("map") !== null){
               }
                 var markerArray = [];
             marker = new L.marker([locations[i][1],locations[i][2]], {
-                icon: listeoIcon,
+                icon: restwellIcon,
                 
               })
               .bindPopup(locations[i][0],popupOptions );
@@ -186,10 +186,10 @@ function singleListingMap() {
 	var lat =  parseFloat($( '#singleListingMap' ).data('latitude'));
 	var singleMapIco =  "<i class='"+$('#singleListingMap').data('map-icon')+"'></i>";
 
-	var listeoIcon = L.divIcon({
+	var restwellIcon = L.divIcon({
 	    iconAnchor: [20, 51], // point of the icon which will correspond to marker's location
 	    popupAnchor: [0, -51],
-	    className: 'listeo-marker-icon',
+	    className: 'restwell-marker-icon',
 	    html:  '<div class="marker-container no-marker-icon ">'+
 	                     '<div class="marker-card">'+
 	                        '<div class="front face">' + singleMapIco + '</div>'+
@@ -221,7 +221,7 @@ function singleListingMap() {
 	map_single.scrollWheelZoom.disable();
 
 	marker = new L.marker([lat,lng], {
-	      icon: listeoIcon,
+	      icon: restwellIcon,
 	}).addTo(map_single);
 
 	// Open Street Map 

@@ -88,7 +88,7 @@ $(document).ready(function(){
           $('.type-and-hit-enter').removeClass('tip-visible tip-visible-focusin');
       }, 350);
       if( $(this).val() == 0 ) {
-        $('div#listeo-listings-container' ).triggerHandler( 'update_results', [ 1, false ] );
+        $('div#restwell-listings-container' ).triggerHandler( 'update_results', [ 1, false ] );
       }
   });
   
